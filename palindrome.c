@@ -18,8 +18,11 @@ int main(void){
 }
 
 Bool is_palindrome(char* str){
-  char* head = str;
   int count = strlen(str);
+  if(count % 2 == 0){
+    return FALSE;
+  }
+  char* head = str;
   char* tail = &str[count - 1];
   while(*head == *tail){
     if((tail - head) == 0){
